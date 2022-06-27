@@ -2,10 +2,21 @@
 
 plugin for [PicGo](https://github.com/Molunerfinn/PicGo)
 
-- 一个通过**[onemanager](https://github.com/qkqpttgf/OneManager-php)** 将图片上传到onedrive的[PicGo](https://github.com/Molunerfinn/PicGo)插件
+- 一个通过[onemanager](https://github.com/qkqpttgf/OneManager-php) 将图片上传到onedrive的[PicGo](https://github.com/Molunerfinn/PicGo)插件
 
-## 使用
+### 为什么制作这个插件
 
+我发现没有能比较好的将onedrive作为图床的方案
+
+发现其中一个原有就是onedrive的外链有时效性,没过多久就会失效
+
+然而结合onemanager的可以刷新外链保持链接有效性
+
+然后发现了picgo这个软件,摸索文档开发了这么一个垃圾小插件
+
+勉强实现了功能,实现方式不算优雅,后期我会慢慢优化
+
+总的来说,穷是原罪,当然欢迎[投食](#赞赏码)
 ### 简单的教程
 
 > #### onemanager设置
@@ -33,3 +44,7 @@ plugin for [PicGo](https://github.com/Molunerfinn/PicGo)
 ![插件设置](https://pan.laoxin.top/od1/ykfile/ccf7a5bf68f2e8567d6afc7a0633c033.png)
 
 **经过上面的设置你已经获得了一个比较完美的onedrive图床**
+
+### 赞赏码(开发维护不易,请赏杯茶水费)
+<div align=center><img width="250" height="250" src="https://github.com/laoxinH/MyScript/blob/main/alpay.jpg"/></div>
+
