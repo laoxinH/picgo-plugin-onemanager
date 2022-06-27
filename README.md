@@ -1,77 +1,39 @@
-# picgo-plugin-web-uploader
+# picgo-plugin-onemanager-uploader
 
 plugin for [PicGo](https://github.com/Molunerfinn/PicGo)
 
-- 自定义Web图床上传
+- 一个通过**[onemanager](https://github.com/qkqpttgf/OneManager-php)** 将图片上传到onedrive的[PicGo](https://github.com/Molunerfinn/PicGo)插件
 
 ## 使用
 
 ### 图床配置
 
-- url: 图床上传API地址
-- paramName: POST参数名
-- jsonPath: 图片URL所在返回值的JsonPath(eg:data.url)
-- customHeader: 自定义请求头 标准JSON(eg: {"key":"value"}
-- customBody: 自定义Body 标准JSON(eg: {"key":"value"})
+> - url: onemanager图床url
 
-### 服务端配置
+### 简单的教程
 
-1. 参照 [PicUploader](https://github.com/xiebruce/PicUploader) 配置同时上传多个免费图床
+> #### onemanager设置
 
-2. 可使用已打包的pic-upload docker镜像
-```
-version: '3'
-services:
-  pic-uploader:
-    image: zqiannnn/pic-uploader:1.0
-    ports:
-      - 8080:80
-    volumes:
-      - ./server.conf:/etc/nginx/conf.d/server.conf
-    environment:
-      - STORAGE_TYPE=Qiniu,Netease,Aliyun,Ucloud,Qingcloud
-#     10G 10G
-      - QINIU_AK=xx
-      - QINIU_SK=xx
-      - QINIU_BUCKET=xx
-      - QINIU_DOMAIN=http://xx.bkt.clouddn.com
-#     50G 20G
-      - NETEASE_AK=xx
-      - NETEASE_AS=xx
-      - NETEASE_BUCKET=xx
-      - NETEASE_ENDPOINT=xx
-      - NETEASE_DOMAIN=https://xx.nos-eastchina1.126.net
-#     无
-      - ALIYUN_AK=xx
-      - ALIYUN_AS=xx
-      - ALIYUN_BUCKET=xx
-      - ALIYUN_ENDPOINT=xx
-      - ALIYUN_DOMAIN=https://xx.aliyuncs.com
-#     20G 20G
-      - UCLOUD_PUBLIC_KEY=xx
-      - UCLOUD_PRIVATE_KEY=xx
-      - UCLOUD_PROXY_SUFFIX=xx
-      - UCLOUD_BUCKET=xx
-      - UCLOUD_ENDPOINT=ufile.ucloud.com.cn
-      - UCLOUD_DOMAIN=http://xx.ufileos.com
-#     30G 11G
-      - QINGCLOUD_AK=xx
-      - QINGCLOUD_SK=xx
-      - QINGCLOUD_BUCKET=xx
-      - QINGCLOUD_ZONE=xx
-#     最后一个domain可设置为步骤3中Nginx域名
-      - QINGCLOUD_DOMAIN=https://xx.qingstor.com
+- 准备好一个**[onemanager](https://github.com/qkqpttgf/OneManager-php)** 
+- **[onemanager](https://github.com/qkqpttgf/OneManager-php)** 搭建教程请自行搜索
+- 进入你的**[onemanager](https://github.com/qkqpttgf/OneManager-php)**后台管理界面
 
-#     自定义返回
-      - CUSTOM_FORMAT={"url":"{{url}}"}
-      - WATERMARK=水印字符
-```
+![后台界面](https://pan.laoxin.top/od1/ykfile/3f60a3e0db1fb0016b52c065a9099bb0.png)
 
-3. 使用Nginx代理多个免费图床[nginx](https://www.xiebruce.top/644.html)
+> 我这里设置的是`/ykfile`文件夹
 
-### 服务端测试
-- Plugin配置
-![](https://img.yuki.xin/2019/07/01/f2c7c902b2d02e1ad9bdcb929a83dd0d.png)
+- 打开你刚刚设置的图床文件夹
+- 复制浏览器地址栏url
 
-- Rest请求
-![](https://i.loli.net/2019/02/27/5c76458ce03e7.png)
+![图床文件夹](https://pan.laoxin.top/od1/ykfile/ce1dcc30ee6091e4668613f76b2a46c4.png)
+
+> 我这里是`https://pan.laoxin.top/od1/ykfile`后面需要将这个url填入到插件url栏<br>
+> 注意 ykfile 文件夹需要提前创建<br>
+> 如果你只是挂载了一个网盘,那么`https://pan.laoxin.top/od1/ykfile`这行地址中不会又`od1`
+
+- 打开插件设置
+- 将刚刚复制的url填入即可
+
+![插件设置](https://pan.laoxin.top/od1/ykfile/ccf7a5bf68f2e8567d6afc7a0633c033.png)
+
+**经过上面的设置你已经完美过的了一个onedrive图床**
