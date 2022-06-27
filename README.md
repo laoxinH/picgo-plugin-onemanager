@@ -6,10 +6,6 @@ plugin for [PicGo](https://github.com/Molunerfinn/PicGo)
 
 ## 使用
 
-### 图床配置
-
-> - url: onemanager图床url
-
 ### 简单的教程
 
 > #### onemanager设置
@@ -29,11 +25,11 @@ plugin for [PicGo](https://github.com/Molunerfinn/PicGo)
 
 > 我这里是`https://pan.laoxin.top/od1/ykfile`后面需要将这个url填入到插件url栏<br>
 > 注意 ykfile 文件夹需要提前创建<br>
-> 如果你只是挂载了一个网盘,那么`https://pan.laoxin.top/od1/ykfile`这行地址中不会又`od1`
+> 如果你只是挂载了一个网盘,那么`https://pan.laoxin.top/od1/ykfile`这行地址中不会存在`od1`
 
 - 打开插件设置
 - 将刚刚复制的url填入即可
 
 ![插件设置](https://pan.laoxin.top/od1/ykfile/ccf7a5bf68f2e8567d6afc7a0633c033.png)
 
-**经过上面的设置你已经完美过的了一个onedrive图床**
+**经过上面的设置你已经获得了一个比较完美的onedrive图床**
