@@ -1,5 +1,8 @@
 # picgo-plugin-onemanager-uploader
 
+[githu仓库](https://github.com/laoxinH/picgo-plugin-onemanager/)
+[我的博客](https://laoxin.top)
+
 plugin for [PicGo](https://github.com/Molunerfinn/PicGo)
 
 - 一个通过[onemanager](https://github.com/qkqpttgf/OneManager-php) 将图片上传到onedrive的[PicGo](https://github.com/Molunerfinn/PicGo)插件
@@ -16,8 +19,14 @@ plugin for [PicGo](https://github.com/Molunerfinn/PicGo)
 
 勉强实现了功能,实现方式不算优雅,后期我会慢慢优化
 
+> 目前采用onemanager的公用图床方案，就是只要知道你的图床地址谁都能上传，但是只能上传不能看到其他图片，过去没少重要的图片也可以使用本教程中提供的示例图床地址
+
 总的来说,穷是原罪,当然欢迎[投食](#赞赏码开发维护不易请赏杯茶水费)
 ### 简单的教程
+
+> #### 插件安装
+
+在picgo中搜索关键词onemanager即可
 
 > #### onemanager设置
 
