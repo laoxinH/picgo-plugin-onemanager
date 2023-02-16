@@ -126,7 +126,8 @@ const getOpts = (customHeader = {}, body, url = "", method = "POST", toStrBody =
         }
     }
     let headers = {
-        contentType: 'multipart/form-data',
+        contentType: 'text/html;charset=UTF-8',
+        // contentType: 'multipart/form-data',
         'User-Agent': 'PicGo'
     }
     if (customHeader) {
